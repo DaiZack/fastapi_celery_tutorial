@@ -38,6 +38,12 @@ poetry config virtualenvs.in-project true;
 poetry install;
 ```
 
+# activate virtual env
+
+```
+source .venv/bin/activate
+```
+
 ## start fastapt
 ```
 uvicorn main:app --host 0.0.0.0 --port 8000
