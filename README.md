@@ -5,6 +5,11 @@
 pip install poetry
 ```
 prepare a .env file in the root directory( BROKER/BACKEND options: redis, amqp, rpc, etc.)
+
+if you use rabbitmq as broker use CELERY_BROKER_TYPE=amqp
+
+if you use rabbitmq as backend use CELERY_RESULT_BACKEND_TYPE=rpc , both port use 5672
+
 ```
 # Celery configuration
 # BROKER options: redis, amqp, rpc, etc.
