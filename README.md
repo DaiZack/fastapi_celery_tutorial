@@ -38,7 +38,7 @@ poetry config virtualenvs.in-project true;
 poetry install;
 ```
 
-# activate virtual env
+## activate virtual env
 
 ```
 source .venv/bin/activate
