@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Status</title>
+</head>
+
+<body>
+    <h1>Job Status</h1>
+    <p id="job-status">{{ status }}</p>
+    <p>Status: {{ status }}</p>
+    {% if output %}
+    <p>Output:</p>
+    <pre>{{ output }}</pre>
+    {% endif %}
+
+    <script>
+        function checkStatus() {
+            // Get the job status from the h1 element
+            var status = document.getElementById("job-status").textContent.trim();
+
+            // Reload the page if the job status is not "SUCCESS"
+            if (status != "SUCCESS") {
+                setTimeout(function () {
+                    location.reload();
+                }, 5000);
+            }
+        }
+
+        // Call the checkStatus function once the page is loaded
+        window.onload = checkStatus;
+    </script>
+
+</body>
+
+</html>
